@@ -81,7 +81,6 @@ fun main() {
     println(s[s.length-1])
     println(s.last())
     //imprime ! (o caracter final do array)
-    */
 
     val name = "Ana"
     val s = "Olá"
@@ -92,5 +91,18 @@ fun main() {
     //Imprime Olá, Ana!
     println("Bem vinda(o), $name!")
     //imprime Bem vinda(o), Ana!
+    //println("${name.capitalize()}")
+
+    //capitalize() toUpperCase()
+    //toLowerCase() decapitalize()
+
+    //trimEnd() trimStart() trim()
+
+    //replace(x,y)
+
+    //formatar outros valores para um padrão de string
+    //"padrão
+    //${valor}".format(valor)
+    */
 
 }
