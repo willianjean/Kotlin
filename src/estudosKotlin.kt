@@ -105,4 +105,19 @@ fun main() {
     //${valor}".format(valor)
     */
 
+    //Empty X Blank
+    val s=""
+    println(s.isEmpty())
+    //true
+    println(s.isBlank())
+    //true
+    println(s.isNullOrBlank() || s.isNullOrEmpty())
+    //true
+
+    val c="       "
+    println(c.isEmpty())
+    //false
+    println(c.isBlank())
+    //true
+
 }
