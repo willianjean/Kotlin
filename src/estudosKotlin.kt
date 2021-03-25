@@ -9,13 +9,13 @@ fun main() {
     println(Byte.MAX_VALUE)
     println(Short.MAX_VALUE)
 
-    //var camelCase
+    //var camelCase valor Mutável
     var currentAge = 22
     var currentAgee:Int?
     currentAgee = null
 
 
-    //val camelCase
+    //val camelCase valor Imutavel
     val currentAge = 22
     val currentAgee:Int?
     currentAgee = null
@@ -103,7 +103,7 @@ fun main() {
     //formatar outros valores para um padrão de string
     //"padrão
     //${valor}".format(valor)
-    */
+
 
     //Empty X Blank
     val s=""
@@ -120,4 +120,33 @@ fun main() {
     println(c.isBlank())
     //true
 
+     */
+
+    //Funções de ordem superior
+    val z:Int
+
+    z = calculate(34,90,::sum)
+    println(z)
+
+
+
+}
+//Funções - Simplificando
+private fun getFullName(name:String, lastName:String):String{
+    val fullName = "$name $lastName"
+    return fullName
+}
+
+private fun getFullname(name:String, lastName:String):String{
+    return "$name $lastName"
+}
+
+private fun getFuLLName(name:String, lastName:String) = "$name $lastName"
+
+//Funções de ordem superior
+fun sum (a1:Int, a2:Int) = a1.plus(a2)
+
+fun calculate(n1:Int, n2:Int, operation:(Int,Int)->Int):Int{
+    val result = operation(n1,n2)
+    return result
 }
