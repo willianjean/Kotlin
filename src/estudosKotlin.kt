@@ -120,15 +120,105 @@ fun main() {
     println(c.isBlank())
     //true
 
-     */
-
     //Funções de ordem superior
     val z:Int
 
     z = calculate(34,90,::sum)
     println(z)
 
+    //Funções single-line - Infere o tipo de retorn
+    private fun getFullName(name:String, lastName:String) = "$name $lastName"
+    //ou tambem no maximo pode se fazer uso da linha seguinte
+    private fun getFullName(name:String, lastName:String) =
+    "$name $lastName"
 
+    //Funções/extensões
+    //Cria uma função que só pode ser chamado por um tipo específico, cujo
+    //o valor pode ser referenciado dentro da função através da palavra this;
+    fun String.radomCapitalizedLetter() =
+        this[(0..this.length-1).random()].toUpperCase()
+    println("jean".radomCapitalizedLetter())
+
+    //Estrutura de controle
+    //if/else, when, elvis operator(?:)
+    if(expressão){
+        //bloco de codigo
+    }else if (expressão2){
+        //bloco de codigo
+    }else{
+        //bloco de codigo
+    }
+
+    //equivalente ao switch de outras linguagens
+    //aceita tanto valores quanto condicionais
+    //aceita range como case
+    when (){
+        case1 -> {}
+        case2 -> {}
+        case3 -> {}
+        else -> {}
+    }
+    when(){
+    a > b -> {}
+    a != b && a > c -> {}
+    b == 0 -> {}
+    else -> {}
+    }
+    when (year){
+    -4000..476 -> //antiguidade
+    476..1452 -> //medieval
+    1453..1789 -> //moderna
+    currentYear -> //ano atual
+    }
+    //elvis operator checa de o valor não é nulo, se for ele atribui o valor seguinte
+    val a:Int? = null
+    var number = b ?: 0
+    //exemplo
+    var number = a?: b?: 0
+    //nesse caso acima, se o valor de a não for nulo, number recebe a
+    //se o valor de a for nulo e b não for nulo, number recebe b
+    //se a e b forem nulos, number recebe 0
+
+    //Atribuição
+    //o valor atribuido tem que estar na ultima linha
+    //a condicional pode usar chaves se so fizer a atribuição
+    val maxValue = if (a > b) a else if (a < b) b else b
+
+    val minValue = if (a > b){
+        println("b($b) é o menor valor")
+        b
+    }else if (a < b){
+        println("a($a) é o menor valor")
+        a
+    }else{
+        println("os valores são iguais")
+        b
+    }
+
+    //Estrutura de repetição (while, do while, for)
+    //Aceita os comandos in, range, until, downTo e step
+    while(true){
+    }
+
+    do{
+    }while(true)
+
+    for(i in 0..20 step 2){
+    }
+
+    //exemplo
+    val sArray = "Olha essa string!"
+    //tamando do array
+    //cada posição do array
+    for(l in sArray){
+        //l[index]
+        println(l.toUpperCase())
+    }
+    //sArray.forEach{ l ->
+    //    print(l + " ")
+    //}
+
+     */
 
 }
 //Funções - Simplificando
